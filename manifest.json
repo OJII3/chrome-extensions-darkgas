@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "version": "1.0.0",
+    "name": "Dark Theme in Gas",
+    "short_name": "DarkGAS",
+    "description": "An extention to use dark theme in Google Apps Script",
+    "defalult_locale": "en_US",
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://script.google.com/home/*"],
+            "js": ["main.js"]
+        }
+    ],
+    "permmissions": [
+        "tabs",
+        "bookmarks"
+    ]
+}
