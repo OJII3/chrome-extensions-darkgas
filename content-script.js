@@ -20,8 +20,10 @@ const changeTheme = theme => {
     }
 
     for (const element of gray_font_elements) {
-        element.style = "color: #ccc;";
+        element.style.color = "#ccc";
     }
+
+    chrome.action.disable();
 };
 
 const createMainButton = () => {
