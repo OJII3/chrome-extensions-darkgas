@@ -23,15 +23,15 @@ const changeTheme = theme => {
         element.style.color = "#ccc";
     }
 
-    chrome.action.disable();
+    
 };
 
 const createMainButton = () => {
     mainButton = document.createElement('button');
     mainButton.id = 'main_button';
     mainButton.innerHTML = "on";
-    mainButton.addEventListener('click', changeTheme());
+    mainButton.addEventListener('click', () => changeTheme());
     buttonSpace.appendChild(mainButton);
 };
 
-changeTheme();
+createMainButton();
