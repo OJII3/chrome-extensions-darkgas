@@ -2,10 +2,10 @@
 
 const buttonSpace = document.querySelector('div.INSTk');
 
-const body = document.getElementsByTagName('body')[0];
-const header = document.getElementsByClassName('gb_Md')[0];
-const side_bar = document.getElementsByClassName('td5WLe')[0];
-const editors = document.querySelectorAll('.OX2gTc, .uZSCEf, .monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input');
+const body = document.querySelector('body');
+const header = document.querySelector('.gb_Md');
+const side_bar = document.querySelector('.td5WLe');
+const editor_backgrounds = document.querySelectorAll('.monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input, .margin');
 const gray_font_elements = document.querySelectorAll('.gb_5d, .UGZzee, .KOiXb');
 let mainButton;
 
@@ -14,8 +14,8 @@ const changeTheme = theme => {
     body.style = "background-color: #111; color: #fff;";
     header.style = "background-color: #222; color: #fff;";
     side_bar.style = "background-color: #000; color: #fff;";
-    
-    for (const element of editors) {
+
+    for (const element of editor_backgrounds) {
         element.style = "background-color: #000;";
     }
 
@@ -32,4 +32,4 @@ const createMainButton = () => {
     buttonSpace.appendChild(mainButton);
 };
 
-createMainButton();
+changeTheme();
